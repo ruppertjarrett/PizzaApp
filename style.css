@@ -24,7 +24,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: rgb(218, 172, 172);
 }
 
 #logo{
@@ -53,6 +53,8 @@ li a:hover {
 #options {
     padding: 7px;
     margin: 7px;
+    border: 5px solid black;
+    border-radius: 35px
 }
 
 #pizza {
