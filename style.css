@@ -65,5 +65,19 @@ li a:hover {
 #price {
     padding: 7px;
     margin: 7px;   
+    border: 5px solid black;
+    border-radius: 35px
+}
+
+button {
+    background-color:#989898;
+    border: 1px solid black;
+    color: black;
+    padding: 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
 }
 
