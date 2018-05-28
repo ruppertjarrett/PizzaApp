@@ -1,3 +1,7 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
 ul {
     list-style-type: none;
     margin: 7px;
@@ -27,3 +31,37 @@ li a:hover {
     color: white;
     width: 10%;
 }
+
+#mainContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+#leftContainer {
+    width: 50%;
+}
+
+#rightContainer {
+    width: 50%;
+}
+
+#buttons {
+    padding: 7px;
+    margin: 7px;
+}
+
+#options {
+    padding: 7px;
+    margin: 7px;
+}
+
+#pizza {
+    padding: 7px;
+    margin: 7px;
+}
+
+#price {
+    padding: 7px;
+    margin: 7px;   
+}
+
