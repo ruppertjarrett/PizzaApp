@@ -8,7 +8,7 @@ ul {
 
 li {
     float: left;
-    width: 18%; 
+    width: 18%;
 }
 
 li a {
@@ -23,7 +23,7 @@ li a:hover {
     background-color: #111;
 }
 
-#logo{
+#logo {
     color: white;
     width: 10%;
 }
