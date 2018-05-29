@@ -12,7 +12,7 @@ ul {
 
 li {
     float: left;
-    width: 18%; 
+    width: 18%;
 }
 
 li a {
@@ -27,9 +27,18 @@ li a:hover {
     background-color: rgb(218, 172, 172);
 }
 
-#logo{
-    color: white;
+#nav {
+    height: 2%;
+}
+
+#start {
     width: 10%;
+    height: 100%;
+}
+
+#logo {
+    height: 30%;
+    width: 30%;
 }
 
 #mainContainer {
@@ -43,6 +52,7 @@ li a:hover {
 
 #rightContainer {
     width: 50%;
+    height: 100%;
 }
 
 #buttons {
@@ -60,6 +70,11 @@ li a:hover {
 #pizza {
     padding: 7px;
     margin: 7px;
+    background-image: url(Images/Crust/Crust.png);
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+    background-repeat: no-repeat;
 }
 
 #price {
