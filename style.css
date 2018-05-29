@@ -60,7 +60,8 @@ li div:hover {
     margin: 7px;
 }
 
-#options, #price {
+#options,
+#price {
     padding: 7px;
     margin: 7px;
     border: 5px solid black;
@@ -78,7 +79,7 @@ li div:hover {
 }
 
 button {
-    background-color:#989898;
+    background-color: #989898;
     border: 1px solid black;
     color: black;
     margin: 7px;
@@ -88,22 +89,35 @@ button {
     display: inline-block;
     font-size: 16px;
     border-radius: 10px;
-    color: white; 
+    color: white;
 }
 
-#basics, #toppings {
+#basicoptions,
+#toppingoptions {
     display: flex;
     flex-direction: column;
 }
 
-#sizes, #sauces, #cheese, #pepperoni, #bacon, #chicken, #ham, #sausage, #bananapeppers, #olives, #jalapenos, #mushrooms, #pineapple{
+#sizes,
+#sauces,
+#cheese,
+#pepperoni,
+#bacon,
+#chicken,
+#ham,
+#sausage,
+#bananapeppers,
+#olives,
+#jalapenos,
+#mushrooms,
+#pineapple {
     display: flex;
     flex-direction: row;
     margin: 7px;
-    padding: 7px;   
+    padding: 7px;
 }
 
-.left{
+.left {
     height: 50px;
     width: 50px;
     background-image: url('Images/Button/left.png');
@@ -111,7 +125,7 @@ button {
     background-size: cover;
 }
 
-.right{
+.right {
     height: 50px;
     width: 50px;
     background-image: url('Images/Button/right.png');
@@ -119,7 +133,7 @@ button {
     background-size: cover;
 }
 
-.full{
+.full {
     height: 50px;
     width: 50px;
     background-image: url('Images/Button/full.png');
@@ -127,7 +141,7 @@ button {
     background-size: cover;
 }
 
-.none{
+.none {
     height: 50px;
     width: 50px;
     background-image: url('Images/Button/none.png');
@@ -135,6 +149,6 @@ button {
     background-size: cover;
 }
 
-#toppings {
+#toppingoptions {
     display: none;
 }
