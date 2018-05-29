@@ -60,7 +60,7 @@ li div:hover {
     margin: 7px;
 }
 
-#options {
+#options, #price {
     padding: 7px;
     margin: 7px;
     border: 5px solid black;
@@ -77,13 +77,6 @@ li div:hover {
     background-repeat: no-repeat;
 }
 
-#price {
-    padding: 7px;
-    margin: 7px;   
-    border: 5px solid black;
-    border-radius: 35px
-}
-
 button {
     background-color:#989898;
     border: 1px solid black;
@@ -98,28 +91,50 @@ button {
     color: white; 
 }
 
-#basics {
+#basics, #toppings {
     display: flex;
     flex-direction: column;
 }
 
-#sizes{
+#sizes, #sauces, #cheese, #pepperoni, #bacon, #chicken, #ham, #sausage, #bananapeppers, #olives, #jalapenos, #mushrooms, #pineapple{
     display: flex;
     flex-direction: row;
     margin: 7px;
     padding: 7px;   
 }
 
-#sauces{
-    display: flex;
-    flex-direction: row;
-    margin: 7px;
-    padding: 7px;
+.left{
+    height: 50px;
+    width: 50px;
+    background-image: url('Images/Button/left.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#cheese{
-    display: flex;
-    flex-direction: row;
-    margin: 7px;
-    padding: 7px;
+.right{
+    height: 50px;
+    width: 50px;
+    background-image: url('Images/Button/right.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.full{
+    height: 50px;
+    width: 50px;
+    background-image: url('Images/Button/full.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.none{
+    height: 50px;
+    width: 50px;
+    background-image: url('Images/Button/none.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#toppings {
+    display: none;
 }
