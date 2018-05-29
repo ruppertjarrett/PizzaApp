@@ -1,4 +1,5 @@
 var pizza = document.getElementById('pizza');
+var basics;
 document.getElementById("meatlovers").addEventListener("click", meatlovers);
 document.getElementById("pepperonilovers").addEventListener("click", pepperonilovers);
 document.getElementById("hawaiian").addEventListener("click", hawaiian);
@@ -44,7 +45,20 @@ document.getElementById("blackoliveright").addEventListener("click", blackoliver
 document.getElementById("pineapplefull").addEventListener("click", pineapplefull);
 document.getElementById("pineappleleft").addEventListener("click", pineappleleft);
 document.getElementById("pineappleright").addEventListener("click", pineappleright);
-var basics;
+document.getElementById("basics").addEventListener("click", basics);
+document.getElementById("toppings").addEventListener("click", toppings);
+
+function basics(evt) {
+    console.log('basics works');
+    document.getElementById('basicoptions').style.display = 'block';
+    document.getElementById('toppingoptions').style.display = 'none';
+}
+
+function toppings(evt) {
+    console.log('toppings works');
+    document.getElementById('toppingoptions').style.display = 'block';
+    document.getElementById('basicoptions').style.display = 'none';
+}
 
 function meatlovers(evt) {
     pizza.style.background = "url('Images/Toppings/HamFull.png'), url('Images/Toppings/ItalianSausageFull.png'), url('Images/Toppings/BaconFull.png'), url('Images/Toppings/ChickenFull.png'), url('Images/Toppings/PepperoniFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";

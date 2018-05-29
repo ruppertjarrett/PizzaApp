@@ -62,7 +62,8 @@ li div:hover {
     margin: 7px;
 }
 
-#options, #price {
+#options,
+#price {
     padding: 7px;
     margin: 7px;
     border: 5px solid black;
@@ -79,8 +80,8 @@ li div:hover {
     background-repeat: no-repeat;
 }
 
-.btn {
-    background-color:#989898;
+.btn, .left, .right, .full, .none {
+    background-color: #989898;
     border: 1px solid black;
     color: black;
     margin: 7px;
@@ -90,107 +91,68 @@ li div:hover {
     display: inline-block;
     font-size: 16px;
     border-radius: 10px;
-    color: white; 
+    color: white;
     cursor: pointer;
     user-select: none;
 }
 
-#basics, #toppings {
+#basicoptions,
+#toppingoptions {
     display: flex;
     flex-direction: column;
 }
 
-#sizes, #sauces, #cheese, #pepperoni, #bacon, #chicken, #ham, #sausage, #bananapeppers, #olives, #jalapenos, #mushrooms, #pineapple{
+#sizes,
+#sauces,
+#cheese,
+#pepperoni,
+#bacon,
+#chicken,
+#ham,
+#sausage,
+#bananapeppers,
+#olives,
+#jalapenos,
+#mushrooms,
+#pineapple {
     display: flex;
     flex-direction: row;
     margin: 7px;
-    padding: 7px;   
+    padding: 7px;
 }
 
-.left{
+.left {
     height: 50px;
     width: 50px;
     background-image: url('Images/Button/left.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color:#989898;
-    border: 1px solid black;
-    color: black;
-    margin: 7px;
-    padding: 7px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 10px;
-    color: white; 
-    cursor: pointer;
-    user-select: none;
 }
 
-.right{
+.right {
     height: 50px;
     width: 50px;
     background-image: url('Images/Button/right.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color:#989898;
-    border: 1px solid black;
-    color: black;
-    margin: 7px;
-    padding: 7px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 10px;
-    color: white; 
-    cursor: pointer;
-    user-select: none;
 }
 
-.full{
+.full {
     height: 50px;
     width: 50px;
     background-image: url('Images/Button/full.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color:#989898;
-    border: 1px solid black;
-    color: black;
-    margin: 7px;
-    padding: 7px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 10px;
-    color: white; 
-    cursor: pointer;
-    user-select: none;
 }
 
-.none{
+.none {
     height: 50px;
     width: 50px;
     background-image: url('Images/Button/none.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color:#989898;
-    border: 1px solid black;
-    color: black;
-    margin: 7px;
-    padding: 7px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 10px;
-    color: white; 
-    cursor: pointer;
-    user-select: none;
 }
 
-#toppings {
+#toppingoptions {
     display: none;
 }
