@@ -64,7 +64,7 @@ li div:hover {
     padding: 7px;
     margin: 7px;
     border: 5px solid black;
-    border-radius: 35px
+    border-radius: 35px;
 }
 
 #pizza {
@@ -88,11 +88,38 @@ button {
     background-color:#989898;
     border: 1px solid black;
     color: black;
+    margin: 7px;
     padding: 7px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     border-radius: 10px;
+    color: white; 
 }
 
+#basics {
+    display: flex;
+    flex-direction: column;
+}
+
+#sizes{
+    display: flex;
+    flex-direction: row;
+    margin: 7px;
+    padding: 7px;   
+}
+
+#sauces{
+    display: flex;
+    flex-direction: row;
+    margin: 7px;
+    padding: 7px;
+}
+
+#cheese{
+    display: flex;
+    flex-direction: row;
+    margin: 7px;
+    padding: 7px;
+}

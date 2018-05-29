@@ -9,7 +9,9 @@
 <body>
     <div id='oasisPizza'>
         <ul id='nav'>
-            <li id='start'><img id='logo' src="Images/Logo/OasisPizza.png" /></li>
+            <li id='start'>
+                <img id='logo' src="Images/Logo/OasisPizza.png" />
+            </li>
             <li>
                 <div id='meatlovers'>Meat Lovers</div>
             </li>
@@ -30,13 +32,32 @@
         <div id="mainContainer">
             <div id="leftContainer">
                 <div id="buttons">
-                    <button id="basics">Basics</button>
-                    <button id="toppings">Toppings</button>
+                    <button>Basics</button>
+                    <button>Toppings</button>
                 </div>
-                <div id="options">Options
-                    <p hidden>Insert placeholder text here.</p>
-                    <p>Insert placeholder text here.</p>
-                    <p>Insert placeholder text here.</p>
+                <div id="options">
+                    <div id="basics">
+                        <div id="sizes">
+                            <p>Sizes:</p>
+                            <button id="smallsize">Small</button>
+                            <button id="mediumsize">Medium</button>
+                            <button id="largesize">Large</button>
+                            <button id="xlsize">X-Large</button>
+                        </div>
+                        <div id="sauces">
+                            <p>Sauces:</p>
+                            <button id="marinara">Marinara</button>
+                            <button id="barbecue">Barbecue</button>
+                            <button id="buffalo">Buffalo</button>
+                        </div>
+                        <div id="cheese">
+                            <p>Cheese:</p>
+                            <button id="lightcheese">Light</button>
+                            <button id="regularcheese">Regular</button>
+                            <button id="extracheese">Extra</button>
+                        </div>
+                    </div>
+                    <div id="toppings"></div>
                 </div>
             </div>
             <div id="rightContainer">
