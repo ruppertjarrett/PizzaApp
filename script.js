@@ -91,6 +91,10 @@ function add(evt) {
     pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
+    document.getElementById('list').innerHTML = "";
+    document.getElementById('total').innerHTML = "Total: ";
+    cost = 0;
+    itemCount = 0;
 }
 
 function smallsize(evt) {
@@ -251,7 +255,7 @@ function pepperonifull(evt) {
         cost += 1;
     }
     
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -272,7 +276,7 @@ function pepperonileft(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -293,7 +297,7 @@ function pepperoniright(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -316,15 +320,15 @@ function pepperoninone(evt) {
     if (current.includes('PepperoniFull')) {
         newCurrent = current.replace(", url(\"Images/Toppings/PepperoniFull.png\")", "");
         var n = str.replace("Pepperoni Full $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('PepperoniHalf')) {
         newCurrent = current.replace(", url(\"Images/Toppings/PepperoniHalf.png\")", "");
         var n = str.replace("Pepperoni Left $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('PepperoniRight')) {
         newCurrent = current.replace(", url(\"Images/Toppings/PepperoniRight.png\")", "");
         var n = str.replace("Pepperoni Right $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     }
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
@@ -340,7 +344,7 @@ function baconfull(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -361,7 +365,7 @@ function baconleft(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -382,7 +386,7 @@ function baconright(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -405,15 +409,15 @@ function baconnone(evt) {
     if (current.includes('BaconFull')) {
         newCurrent = current.replace(", url(\"Images/Toppings/BaconFull.png\")", "");
         var n = str.replace("Bacon Full $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('BaconHalf')) {
         newCurrent = current.replace(", url(\"Images/Toppings/BaconHalf.png\")", "");
         var n = str.replace("Bacon Left $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('BaconRight')) {
         newCurrent = current.replace(", url(\"Images/Toppings/BaconRight.png\")", "");
         var n = str.replace("Bacon Right $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     }
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
@@ -429,7 +433,7 @@ function hamfull(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -450,7 +454,7 @@ function hamleft(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost  += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -471,7 +475,7 @@ function hamright(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -494,15 +498,15 @@ function hamnone(evt) {
     if (current.includes('HamFull')) {
         newCurrent = current.replace(", url(\"Images/Toppings/HamFull.png\")", "");
         var n = str.replace("Ham Full $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('HamHalf')) {
         newCurrent = current.replace(", url(\"Images/Toppings/HamHalf.png\")", "");
         var n = str.replace("Ham Left $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('HamRight')) {
         newCurrent = current.replace(", url(\"Images/Toppings/HamRight.png\")", "");
         var n = str.replace("Ham Right $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     }
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
@@ -518,7 +522,7 @@ function sausagefull(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost +=1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -539,7 +543,7 @@ function sausageleft(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -560,7 +564,7 @@ function sausageright(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -583,15 +587,15 @@ function sausagenone(evt) {
     if (current.includes('ItalianSausageFull')) {
         newCurrent = current.replace(", url(\"Images/Toppings/ItalianSausageFull.png\")", "");
         var n = str.replace("Sausage Full $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('ItalianSausageHalf')) {
         newCurrent = current.replace(", url(\"Images/Toppings/ItalianSausageHalf.png\")", "");
         var n = str.replace("Sausage Left $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('ItalianSausageRight')) {
         newCurrent = current.replace(", url(\"Images/Toppings/ItalianSausageRight.png\")", "");
         var n = str.replace("Sausage Right $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     }
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
@@ -607,7 +611,7 @@ function chickenfull(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -628,7 +632,7 @@ function chickenleft(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -649,7 +653,7 @@ function chickenright(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -672,15 +676,15 @@ function chickennone(evt) {
     if (current.includes('ChickenFull')) {
         newCurrent = current.replace(", url(\"Images/Toppings/ChickenFull.png\")", "");
         var n = str.replace("Chicken Full $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('ChickenHalf')) {
         newCurrent = current.replace(", url(\"Images/Toppings/ChickenHalf.png\")", "");
         var n = str.replace("Chicken Left $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('ChickenRight')) {
         newCurrent = current.replace(", url(\"Images/Toppings/ChickenRight.png\")", "");
         var n = str.replace("Chicken Right $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     }
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
@@ -696,7 +700,7 @@ function olivesfull(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost +=1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -717,7 +721,7 @@ function olivesleft(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -738,7 +742,7 @@ function olivesright(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -761,15 +765,15 @@ function olivesnone(evt) {
     if (current.includes('BlackOliveFull')) {
         newCurrent = current.replace(", url(\"Images/Toppings/BlackOliveFull.png\")", "");
         var n = str.replace("Black Olives $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('BlackOliveHalf')) {
         newCurrent = current.replace(", url(\"Images/Toppings/BlackOliveHalf.png\")", "");
         var n = str.replace("Black Olives Left $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('BlackOliveRight')) {
         newCurrent = current.replace(", url(\"Images/Toppings/BlackOliveRight.png\")", "");
         var n = str.replace("Black Olives Right $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     }
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
@@ -785,7 +789,7 @@ function bananapeppersfull(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -806,7 +810,7 @@ function bananapeppersleft(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -827,7 +831,7 @@ function bananapeppersright(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -850,15 +854,15 @@ function bananapeppersnone(evt) {
     if (current.includes('BananaPeppersFull')) {
         newCurrent = current.replace(", url(\"Images/Toppings/BananaPeppersFull.png\")", "");
         var n = str.replace("Banana Peppers Full $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('BananaPeppersHalf')) {
         newCurrent = current.replace(", url(\"Images/Toppings/BananaPeppersHalf.png\")", "");
         var n = str.replace("Banana Peppers Left $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('BananaPeppersRight')) {
         newCurrent = current.replace(", url(\"Images/Toppings/BananaPeppersRight.png\")", "");
         var n = str.replace("Banana Peppers Right $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     }
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
@@ -875,7 +879,7 @@ function jalapenofull(evt) {
         cost += 1;
     }
 
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -896,7 +900,7 @@ function jalapenoleft(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -917,7 +921,7 @@ function jalapenoright(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -940,15 +944,15 @@ function jalapenonone(evt) {
     if (current.includes('JalapenoFull')) {
         newCurrent = current.replace(", url(\"Images/Toppings/JalapenoFull.png\")", "");
         var n = str.replace("Jalapenos Full $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('JalapenoHalf')) {
         newCurrent = current.replace(", url(\"Images/Toppings/JalapenoHalf.png\")", "");
         var n = str.replace("Jalapenos Left $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('JalapenoRight')) {
         newCurrent = current.replace(", url(\"Images/Toppings/JalapenoRight.png\")", "");
         var n = str.replace("Jalapenos Right $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     }
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
@@ -964,7 +968,7 @@ function mushroomsfull(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -985,7 +989,7 @@ function mushroomsleft(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -1006,7 +1010,7 @@ function mushroomsright(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -1029,15 +1033,15 @@ function mushroomsnone(evt) {
     if (current.includes('MushroomFull')) {
         newCurrent = current.replace(", url(\"Images/Toppings/MushroomFull.png\")", "");
         var n = str.replace("Mushrooms Full $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('MushroomHalf')) {
         newCurrent = current.replace(", url(\"Images/Toppings/MushroomHalf.png\")", "");
         var n = str.replace("Mushrooms Left $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('MushroomRight')) {
         newCurrent = current.replace(", url(\"Images/Toppings/MushroomRight.png\")", "");
         var n = str.replace("Mushrooms Right $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     }
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
@@ -1053,7 +1057,7 @@ function pineapplefull(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -1074,7 +1078,7 @@ function pineappleleft(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -1095,7 +1099,7 @@ function pineappleright(evt) {
         itemCount += 1;
         cost += 1;
     }
-    if(itemCount==5){
+    if (itemCount == 5) {
         cost += 1;
     }
     basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
@@ -1118,15 +1122,15 @@ function pineapplenone(evt) {
     if (current.includes('PineappleFull')) {
         newCurrent = current.replace(", url(\"Images/Toppings/PineappleFull.png\")", "");
         var n = str.replace("Pineapple Full $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('PineappleHalf')) {
         newCurrent = current.replace(", url(\"Images/Toppings/PineappleHalf.png\")", "");
         var n = str.replace("Pineapple Left $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     } else if (current.includes('PineappleRight')) {
         newCurrent = current.replace(", url(\"Images/Toppings/PineappleRight.png\")", "");
         var n = str.replace("Pineapple Right $1 \<br\>", "");
-        document.getElementById("list").innerHTML=n;
+        document.getElementById("list").innerHTML = n;
     }
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
