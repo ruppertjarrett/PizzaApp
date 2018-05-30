@@ -73,11 +73,8 @@ li div:hover {
 #pizza {
     padding: 7px;
     margin: 7px;
-    background-image: url(Images/Crust/Crust.png);
-    background-size: cover;
     height: 350px;
     width: 350px;
-    background-repeat: no-repeat;
 }
 
 .btn,

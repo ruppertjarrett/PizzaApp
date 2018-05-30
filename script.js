@@ -1,7 +1,10 @@
 var pizza = document.getElementById('pizza');
+var size = document.getElementById('size');
 var basics;
+var crust;
 var current;
 var newCurrent;
+window.addEventListener("load", load);
 var itemCount = 0;
 var cost = 0;
 document.getElementById("basics").addEventListener("click", basics);
@@ -61,6 +64,135 @@ document.getElementById("fullpineapple").addEventListener("click", pineapplefull
 document.getElementById("leftpineapple").addEventListener("click", pineappleleft);
 document.getElementById("rightpineapple").addEventListener("click", pineappleright);
 document.getElementById("nonepineapple").addEventListener("click", pineapplenone);
+document.getElementById("smallsize").addEventListener("click", smallsize);
+document.getElementById("mediumsize").addEventListener("click", mediumsize);
+document.getElementById("largesize").addEventListener("click", largesize);
+document.getElementById("xlsize").addEventListener("click", xlsize);
+document.getElementById("lightcheese").addEventListener("click", lightcheese);
+document.getElementById("regularcheese").addEventListener("click", regularcheese);
+document.getElementById("extracheese").addEventListener("click", extracheese);
+document.getElementById("marinara").addEventListener("click", marinara);
+document.getElementById("buffalo").addEventListener("click", buffalo);
+document.getElementById("barbecue").addEventListener("click", barbecue);
+document.getElementById("add").addEventListener("click", add);
+
+function load(evt) {
+    console.log('Loaded');
+    pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+}
+
+function add(evt) {
+    alert("Thank you for your order!!!");
+    size.innerHTML = "Size:"
+    document.getElementById('basicoptions').style.display = 'block';
+    document.getElementById('toppingoptions').style.display = 'none';
+    pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+}
+
+function smallsize(evt) {
+    size.innerHTML = "Size: Small";
+}
+
+function mediumsize(evt) {
+    size.innerHTML = "Size: Medium";
+}
+
+function largesize(evt) {
+    size.innerHTML = "Size: Large";
+}
+
+function xlsize(evt) {
+    size.innerHTML = "Size: Extra Large";
+}
+
+function marinara(evt) {
+    if (pizza.style.background.length < 79) {
+        crust = pizza.style.background.substring(pizza.style.background.length - 31, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 31);
+    } else if (pizza.style.background.length > 79) {
+        crust = pizza.style.background.substring(pizza.style.background.length - 31, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 66);
+    }
+    pizza.style.background += ", url('Images/Sauces/Marinara.png')";
+    pizza.style.background += crust;
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+}
+
+function barbecue(evt) {
+    if (pizza.style.background.length < 79) {
+        crust = pizza.style.background.substring(pizza.style.background.length - 31, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 31);
+    } else if (pizza.style.background.length > 79) {
+        crust = pizza.style.background.substring(pizza.style.background.length - 31, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 66);
+
+    }
+    pizza.style.background += ", url('Images/Sauces/Barbecue.png')";
+    pizza.style.background += crust;
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+}
+
+function buffalo(evt) {
+    if (pizza.style.background.length < 79) {
+        crust = pizza.style.background.substring(pizza.style.background.length - 31, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 31);
+    } else if (pizza.style.background.length > 79) {
+        crust = pizza.style.background.substring(pizza.style.background.length - 31, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 66);
+    }
+    pizza.style.background += ", url('Images/Sauces/Buffalos.png')";
+    pizza.style.background += crust;
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+}
+
+function lightcheese(evt) {
+    if (pizza.style.background.length < 114) {
+        crust = pizza.style.background.substring(pizza.style.background.length - 66, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 66);
+    } else if (pizza.style.background.length > 114) {
+        crust = pizza.style.background.substring(pizza.style.background.length - 66, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 102);
+    }
+    pizza.style.background += ", url('Images/Cheese/LowCheese.png')";
+    pizza.style.background += crust;
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+}
+
+function regularcheese(evt) {
+    if (pizza.style.background.length < 114) {
+        crust = pizza.style.background.substring(pizza.style.background.length - 66, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 66);
+    } else if (pizza.style.background.length > 114) {
+        crust = pizza.style.background.substring(pizza.style.background.length - 66, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 102);
+    }
+    pizza.style.background += ", url('Images/Cheese/RegCheese.png')";
+    pizza.style.background += crust;
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+}
+
+function extracheese(evt) {
+    if (pizza.style.background.length < 114) {
+        crust = pizza.style.background.substring(pizza.style.background.length - 66, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 66);
+    } else if (pizza.style.background.length > 114) {
+        crust = pizza.style.background.substring(pizza.style.background.length - 66, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 102);
+    }
+    pizza.style.background += ", url('Images/Cheese/ExtCheese.png')";
+    pizza.style.background += crust;
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+}
 
 function basics(evt) {
     document.getElementById('basicoptions').style.display = 'block';
@@ -73,7 +205,7 @@ function toppings(evt) {
 }
 
 function meatlovers(evt) {
-    pizza.style.background = "url('Images/Empty.png'), url('Images/Toppings/HamFull.png'), url('Images/Toppings/ItalianSausageFull.png'), url('Images/Toppings/BaconFull.png'), url('Images/Toppings/ChickenFull.png'), url('Images/Toppings/PepperoniFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";;
+    pizza.style.background = "url('Images/Empty.png'), url('Images/Toppings/HamFull.png'), url('Images/Toppings/ItalianSausageFull.png'), url('Images/Toppings/BaconFull.png'), url('Images/Toppings/ChickenFull.png'), url('Images/Toppings/PepperoniFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
 }
@@ -850,4 +982,5 @@ function pineapplenone(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("total").textContent = cost;
-}
+}}
+medium
