@@ -2,6 +2,14 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
+.web {
+    visibility: visible;
+}
+
+.mobile {
+    visibility: hidden;
+}
+
 ul {
     list-style-type: none;
     margin: 7px;
@@ -156,4 +164,20 @@ li div:hover {
 
 #toppingoptions {
     display: none;
+}
+
+@media (max-width: 641px) {
+    #mainContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    #leftContainer {
+        order: 2;
+    }
+    #rightContainer {
+        order: 1;
+    }
+    #add {
+        order: 3;
+    }
 }

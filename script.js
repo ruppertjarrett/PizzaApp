@@ -209,33 +209,107 @@ function toppings(evt) {
 }
 
 function meatlovers(evt) {
+    size.innerHTML = "Size:"
+    document.getElementById('basicoptions').style.display = 'block';
+    document.getElementById('toppingoptions').style.display = 'none';
+    pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+    document.getElementById('list').innerHTML = "";
+    document.getElementById('total').innerHTML = "Total: ";
+    cost = 0;
+    itemCount = 0;
     pizza.style.background = "url('Images/Empty.png'), url('Images/Toppings/HamFull.png'), url('Images/Toppings/ItalianSausageFull.png'), url('Images/Toppings/BaconFull.png'), url('Images/Toppings/ChickenFull.png'), url('Images/Toppings/PepperoniFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
+    hamfull(evt);
+    sausagefull(evt);
+    baconfull(evt);
+    chickenfull(evt);
+    pepperonifull(evt);
 }
 
 function pepperonilovers(evt) {
+    size.innerHTML = "Size:"
+    document.getElementById('basicoptions').style.display = 'block';
+    document.getElementById('toppingoptions').style.display = 'none';
+    pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+    document.getElementById('list').innerHTML = "";
+    document.getElementById('total').innerHTML = "Total: ";
+    cost = 0;
+    itemCount = 0;
     pizza.style.background = "url('Images/Empty.png'), url('Images/Toppings/PepperoniFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
+    pepperonifull(evt);
 }
 
 function hawaiian(evt) {
+    size.innerHTML = "Size:"
+    document.getElementById('basicoptions').style.display = 'block';
+    document.getElementById('toppingoptions').style.display = 'none';
+    pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+    document.getElementById('list').innerHTML = "";
+    document.getElementById('total').innerHTML = "Total: ";
+    cost = 0;
+    itemCount = 0;
     pizza.style.background = "url('Images/Empty.png'), url('Images/Toppings/PineappleFull.png'), url('Images/Toppings/HamFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
+    pineapplefull(evt);
+    hamfull(evt);
 }
 
 function supreme(evt) {
+    size.innerHTML = "Size:"
+    document.getElementById('basicoptions').style.display = 'block';
+    document.getElementById('toppingoptions').style.display = 'none';
+    pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+    document.getElementById('list').innerHTML = "";
+    document.getElementById('total').innerHTML = "Total: ";
+    cost = 0;
+    itemCount = 0;
     pizza.style.background = "url('Images/Empty.png'), url('Images/Toppings/BaconFull.png'), url('Images/Toppings/JalapenoFull.png'), url('Images/Toppings/BlackOliveFull.png'), url('Images/Toppings/MushroomFull.png'),url('Images/Toppings/BananaPeppersFull.png'), url('Images/Toppings/PepperoniFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
+    baconfull(evt);
+    jalapenofull(evt);
+    olivesfull(evt);
+    mushroomsfull(evt);
+    bananapeppersfull(evt);
+    pepperonifull(evt);
 }
 
 function thebeast(evt) {
+    size.innerHTML = "Size:"
+    document.getElementById('basicoptions').style.display = 'block';
+    document.getElementById('toppingoptions').style.display = 'none';
+    pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+    document.getElementById('list').innerHTML = "";
+    document.getElementById('total').innerHTML = "Total: ";
+    cost = 0;
+    itemCount = 0;
     pizza.style.background = "url('Images/Empty.png'), url('Images/Toppings/PineappleFull.png'),url('Images/Toppings/BananaPeppersFull.png'),url('Images/Toppings/BlackOliveFull.png'),url('Images/Toppings/JalapenoFull.png'),url('Images/Toppings/MushroomFull.png'),url('Images/Toppings/PepperoniFull.png'), url('Images/Toppings/ItalianSausageFull.png'), url('Images/Toppings/BaconFull.png'), url('Images/Toppings/ChickenFull.png'), url('Images/Toppings/HamFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
+    pineapplefull(evt);
+    bananapeppersfull(evt);
+    olivesfull(evt);
+    jalapenofull(evt);
+    mushroomsfull(evt);
+    pepperonifull(evt);
+    sausagefull(evt);
+    baconfull(evt);
+    chickenfull(evt);
+    hamfull(evt);
 }
 
 function pepperonifull(evt) {
@@ -287,11 +361,11 @@ function pepperoniright(evt) {
 }
 
 function pepperoninone(evt) {
-    if(itemCount > 0 && cost > 0){
+    if (itemCount > 0 && cost > 0) {
         itemCount -= 1;
         cost -= 1;
     }
-    if(itemCount==4){
+    if (itemCount == 4) {
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -364,11 +438,11 @@ function baconright(evt) {
 }
 
 function baconnone(evt) {
-    if(itemCount > 0 && cost > 0){
+    if (itemCount > 0 && cost > 0) {
         itemCount -= 1;
         cost -= 1;
     }
-    if(itemCount==4){
+    if (itemCount == 4) {
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -441,11 +515,11 @@ function hamright(evt) {
 }
 
 function hamnone(evt) {
-    if(itemCount > 0 && cost > 0){
+    if (itemCount > 0 && cost > 0) {
         itemCount -= 1;
         cost -= 1;
     }
-    if(itemCount==4){
+    if (itemCount == 4) {
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -518,11 +592,11 @@ function sausageright(evt) {
 }
 
 function sausagenone(evt) {
-    if(itemCount > 0 && cost > 0){
+    if (itemCount > 0 && cost > 0) {
         itemCount -= 1;
         cost -= 1;
     }
-    if(itemCount==4){
+    if (itemCount == 4) {
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -595,11 +669,11 @@ function chickenright(evt) {
 }
 
 function chickennone(evt) {
-    if(itemCount > 0 && cost > 0){
+    if (itemCount > 0 && cost > 0) {
         itemCount -= 1;
         cost -= 1;
     }
-    if(itemCount==4){
+    if (itemCount == 4) {
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -672,11 +746,11 @@ function olivesright(evt) {
 }
 
 function olivesnone(evt) {
-    if(itemCount > 0 && cost > 0){
+    if (itemCount > 0 && cost > 0) {
         itemCount -= 1;
         cost -= 1;
     }
-    if(itemCount==4){
+    if (itemCount == 4) {
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -749,11 +823,11 @@ function bananapeppersright(evt) {
 }
 
 function bananapeppersnone(evt) {
-    if(itemCount > 0 && cost > 0){
+    if (itemCount > 0 && cost > 0) {
         itemCount -= 1;
         cost -= 1;
     }
-    if(itemCount==4){
+    if (itemCount == 4) {
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -826,11 +900,11 @@ function jalapenoright(evt) {
 }
 
 function jalapenonone(evt) {
-    if(itemCount > 0 && cost > 0){
+    if (itemCount > 0 && cost > 0) {
         itemCount -= 1;
         cost -= 1;
     }
-    if(itemCount==4){
+    if (itemCount == 4) {
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -903,11 +977,11 @@ function mushroomsright(evt) {
 }
 
 function mushroomsnone(evt) {
-    if(itemCount > 0 && cost > 0){
+    if (itemCount > 0 && cost > 0) {
         itemCount -= 1;
         cost -= 1;
     }
-    if(itemCount==4){
+    if (itemCount == 4) {
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -980,11 +1054,11 @@ function pineappleright(evt) {
 }
 
 function pineapplenone(evt) {
-    if(itemCount > 0 && cost > 0){
+    if (itemCount > 0 && cost > 0) {
         itemCount -= 1;
         cost -= 1;
     }
-    if(itemCount==4){
+    if (itemCount == 4) {
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
