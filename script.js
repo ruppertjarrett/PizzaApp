@@ -72,9 +72,20 @@ document.getElementById("extracheese").addEventListener("click", extracheese);
 document.getElementById("marinara").addEventListener("click", marinara);
 document.getElementById("buffalo").addEventListener("click", buffalo);
 document.getElementById("barbecue").addEventListener("click", barbecue);
+document.getElementById("add").addEventListener("click", add);
 
 function load(evt) {
     console.log('Loaded');
+    pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
+}
+
+function add(evt) {
+    alert("Thank you for your order!!!");
+    size.innerHTML = "Size:"
+    document.getElementById('basicoptions').style.display = 'block';
+    document.getElementById('toppingoptions').style.display = 'none';
     pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
