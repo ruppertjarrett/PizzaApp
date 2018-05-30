@@ -764,15 +764,15 @@ function olivesnone(evt) {
     current = pizza.style.background;
     if (current.includes('BlackOliveFull')) {
         newCurrent = current.replace(", url(\"Images/Toppings/BlackOliveFull.png\")", "");
-        var n = str.replace("Black Olives $1 \<br\>", "");
+        var n = str.replace("Olives Full $1 \<br\>", "");
         document.getElementById("list").innerHTML = n;
     } else if (current.includes('BlackOliveHalf')) {
         newCurrent = current.replace(", url(\"Images/Toppings/BlackOliveHalf.png\")", "");
-        var n = str.replace("Black Olives Left $1 \<br\>", "");
+        var n = str.replace("Olives Left $1 \<br\>", "");
         document.getElementById("list").innerHTML = n;
     } else if (current.includes('BlackOliveRight')) {
         newCurrent = current.replace(", url(\"Images/Toppings/BlackOliveRight.png\")", "");
-        var n = str.replace("Black Olives Right $1 \<br\>", "");
+        var n = str.replace("Olives Right $1 \<br\>", "");
         document.getElementById("list").innerHTML = n;
     }
     pizza.style.background = newCurrent;
@@ -943,15 +943,15 @@ function jalapenonone(evt) {
     current = pizza.style.background;
     if (current.includes('JalapenoFull')) {
         newCurrent = current.replace(", url(\"Images/Toppings/JalapenoFull.png\")", "");
-        var n = str.replace("Jalapenos Full $1 \<br\>", "");
+        var n = str.replace("Jalapeno Full $1 \<br\>", "");
         document.getElementById("list").innerHTML = n;
     } else if (current.includes('JalapenoHalf')) {
         newCurrent = current.replace(", url(\"Images/Toppings/JalapenoHalf.png\")", "");
-        var n = str.replace("Jalapenos Left $1 \<br\>", "");
+        var n = str.replace("Jalapeno Left $1 \<br\>", "");
         document.getElementById("list").innerHTML = n;
     } else if (current.includes('JalapenoRight')) {
         newCurrent = current.replace(", url(\"Images/Toppings/JalapenoRight.png\")", "");
-        var n = str.replace("Jalapenos Right $1 \<br\>", "");
+        var n = str.replace("Jalapeno Right $1 \<br\>", "");
         document.getElementById("list").innerHTML = n;
     }
     pizza.style.background = newCurrent;
