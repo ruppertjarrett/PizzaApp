@@ -80,7 +80,11 @@ li div:hover {
     background-repeat: no-repeat;
 }
 
-.btn, .left, .right, .full, .none {
+.btn,
+.left,
+.right,
+.full,
+.none {
     background-color: #989898;
     border: 1px solid black;
     color: black;
@@ -122,32 +126,32 @@ li div:hover {
 }
 
 .left {
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     background-image: url('Images/Button/left.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .right {
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     background-image: url('Images/Button/right.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .full {
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     background-image: url('Images/Button/full.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .none {
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     background-image: url('Images/Button/none.png');
     background-repeat: no-repeat;
     background-size: cover;
