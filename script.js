@@ -267,7 +267,7 @@ function pepperonileft(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Pepperoni Left $1 \n";
-    document.getElementById("total").textContent = cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function pepperoniright(evt) {
@@ -283,13 +283,15 @@ function pepperoniright(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Pepperoni Right $1 \n";
-    document.getElementById("total").textContent = cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function pepperoninone(evt) {
-    itemCount -= 1;
-    cost -= 1;
-    if (itemCount == 4) {
+    if(itemCount > 0 && cost > 0){
+        itemCount -= 1;
+        cost -= 1;
+    }
+    if(itemCount==4){
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -310,7 +312,7 @@ function pepperoninone(evt) {
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    document.getElementById("total").textContent = cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function baconfull(evt) {
@@ -326,7 +328,7 @@ function baconfull(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Bacon Full $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function baconleft(evt) {
@@ -342,7 +344,7 @@ function baconleft(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Bacon Left $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function baconright(evt) {
@@ -358,13 +360,15 @@ function baconright(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Bacon Right $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function baconnone(evt) {
-    itemCount -= 1;
-    cost -= 1;
-    if (itemCount == 4) {
+    if(itemCount > 0 && cost > 0){
+        itemCount -= 1;
+        cost -= 1;
+    }
+    if(itemCount==4){
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -385,7 +389,7 @@ function baconnone(evt) {
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    document.getElementById("total").textContent = cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function hamfull(evt) {
@@ -401,7 +405,7 @@ function hamfull(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Ham Full $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function hamleft(evt) {
@@ -417,7 +421,7 @@ function hamleft(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Ham Left $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function hamright(evt) {
@@ -433,13 +437,15 @@ function hamright(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Ham Right $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function hamnone(evt) {
-    itemCount -= 1;
-    cost -= 1;
-    if (itemCount == 4) {
+    if(itemCount > 0 && cost > 0){
+        itemCount -= 1;
+        cost -= 1;
+    }
+    if(itemCount==4){
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -460,7 +466,7 @@ function hamnone(evt) {
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    document.getElementById("total").textContent = cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function sausagefull(evt) {
@@ -476,7 +482,7 @@ function sausagefull(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Sausage Full $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function sausageleft(evt) {
@@ -492,7 +498,7 @@ function sausageleft(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Sausage Left $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function sausageright(evt) {
@@ -508,13 +514,15 @@ function sausageright(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Sausage Right $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function sausagenone(evt) {
-    itemCount -= 1;
-    cost -= 1;
-    if (itemCount == 4) {
+    if(itemCount > 0 && cost > 0){
+        itemCount -= 1;
+        cost -= 1;
+    }
+    if(itemCount==4){
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -535,7 +543,7 @@ function sausagenone(evt) {
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    document.getElementById("total").textContent = cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function chickenfull(evt) {
@@ -551,7 +559,7 @@ function chickenfull(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Chicken Full $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function chickenleft(evt) {
@@ -567,7 +575,7 @@ function chickenleft(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Chicken Left $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function chickenright(evt) {
@@ -583,13 +591,15 @@ function chickenright(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Chicken Right $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function chickennone(evt) {
-    itemCount -= 1;
-    cost -= 1;
-    if (itemCount == 4) {
+    if(itemCount > 0 && cost > 0){
+        itemCount -= 1;
+        cost -= 1;
+    }
+    if(itemCount==4){
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -610,7 +620,7 @@ function chickennone(evt) {
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    document.getElementById("total").textContent = cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function olivesfull(evt) {
@@ -626,7 +636,7 @@ function olivesfull(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Olives Full $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function olivesleft(evt) {
@@ -642,7 +652,7 @@ function olivesleft(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Olives Left $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function olivesright(evt) {
@@ -658,13 +668,15 @@ function olivesright(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Olives Right $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function olivesnone(evt) {
-    itemCount -= 1;
-    cost -= 1;
-    if (itemCount == 4) {
+    if(itemCount > 0 && cost > 0){
+        itemCount -= 1;
+        cost -= 1;
+    }
+    if(itemCount==4){
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -685,7 +697,7 @@ function olivesnone(evt) {
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    document.getElementById("total").textContent = cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function bananapeppersfull(evt) {
@@ -701,7 +713,7 @@ function bananapeppersfull(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Banana Peppers Full $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function bananapeppersleft(evt) {
@@ -717,7 +729,7 @@ function bananapeppersleft(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Banana Peppers Left $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function bananapeppersright(evt) {
@@ -733,13 +745,15 @@ function bananapeppersright(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Banana Peppers Right $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function bananapeppersnone(evt) {
-    itemCount -= 1;
-    cost -= 1;
-    if (itemCount == 4) {
+    if(itemCount > 0 && cost > 0){
+        itemCount -= 1;
+        cost -= 1;
+    }
+    if(itemCount==4){
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -760,7 +774,7 @@ function bananapeppersnone(evt) {
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    document.getElementById("total").textContent = cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function jalapenofull(evt) {
@@ -776,7 +790,7 @@ function jalapenofull(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Jalapeno Full $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function jalapenoleft(evt) {
@@ -792,7 +806,7 @@ function jalapenoleft(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Jalapeno Left $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function jalapenoright(evt) {
@@ -808,13 +822,15 @@ function jalapenoright(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Jalapeno Right $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function jalapenonone(evt) {
-    itemCount -= 1;
-    cost -= 1;
-    if (itemCount == 4) {
+    if(itemCount > 0 && cost > 0){
+        itemCount -= 1;
+        cost -= 1;
+    }
+    if(itemCount==4){
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -835,7 +851,7 @@ function jalapenonone(evt) {
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    document.getElementById("total").textContent = cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function mushroomsfull(evt) {
@@ -851,7 +867,7 @@ function mushroomsfull(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Mushrooms Full $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function mushroomsleft(evt) {
@@ -867,7 +883,7 @@ function mushroomsleft(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Mushrooms Left $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function mushroomsright(evt) {
@@ -883,13 +899,15 @@ function mushroomsright(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Mushrooms Right $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function mushroomsnone(evt) {
-    itemCount -= 1;
-    cost -= 1;
-    if (itemCount == 4) {
+    if(itemCount > 0 && cost > 0){
+        itemCount -= 1;
+        cost -= 1;
+    }
+    if(itemCount==4){
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -910,7 +928,7 @@ function mushroomsnone(evt) {
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    document.getElementById("total").textContent = cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function pineapplefull(evt) {
@@ -926,7 +944,7 @@ function pineapplefull(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Pineapple Full $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function pineappleleft(evt) {
@@ -942,7 +960,7 @@ function pineappleleft(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Pineapple Left $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function pineappleright(evt) {
@@ -958,13 +976,15 @@ function pineappleright(evt) {
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
     document.getElementById("list").textContent += "Pineapple Right $1 \n";
-    document.getElementById("total").textContent += cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function pineapplenone(evt) {
-    itemCount -= 1;
-    cost -= 1;
-    if (itemCount == 4) {
+    if(itemCount > 0 && cost > 0){
+        itemCount -= 1;
+        cost -= 1;
+    }
+    if(itemCount==4){
         cost = 4;
     }
     var str = document.getElementById("list").innerHTML;
@@ -985,5 +1005,5 @@ function pineapplenone(evt) {
     pizza.style.background = newCurrent;
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    document.getElementById("total").textContent = cost;
+    document.getElementById("total").textContent = "Total: $" + cost;
 }
