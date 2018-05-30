@@ -21,6 +21,8 @@ li div {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    cursor: pointer;
+    user-select: none;
 }
 
 li div:hover {
@@ -78,7 +80,7 @@ li div:hover {
     background-repeat: no-repeat;
 }
 
-button {
+.btn, .left, .right, .full, .none {
     background-color: #989898;
     border: 1px solid black;
     color: black;
@@ -90,6 +92,8 @@ button {
     font-size: 16px;
     border-radius: 10px;
     color: white;
+    cursor: pointer;
+    user-select: none;
 }
 
 #basicoptions,
