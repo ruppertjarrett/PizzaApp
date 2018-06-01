@@ -1183,7 +1183,7 @@ function thebeast(evt) {
 // }
 
 var toppingOptions = document.getElementById('toppingoptions');
-var toppingBtnId = ['PepperoniFull', 'PepperoniHalf', 'PepperoniRght', 'BaconFull', 'BaconHalf', 'BaconRght', 'ChickenFull', 'ChickenHalf', 'ChickenRght', 'HamFull', 'HamHalf', 'HamRght', 'ItalianSausageFull', 'ItalianSausageHalf', 'ItalianSausageRght', 'BananaPeppersFull', 'BananaPeppersHalf', 'BananaPeppersRght', 'BlackOliveFull', 'BlackOliveHalf', 'BlackOliveRght', 'JalapenoFull', 'JalapenoHalf', 'JalapenoRght', 'MushroomFull', 'MushroomHalf', 'MushroomRght', 'PineappleFull', 'PineappleHalf', 'PineappleRght'];
+var toppingBtnId = ['PepperoniFull', 'PepperoniHalf', 'PepperoniRght', 'PepperoniNone', 'BaconFull', 'BaconHalf', 'BaconRght', 'BaconNone', 'ChickenFull', 'ChickenHalf', 'ChickenRght', 'ChickenNone', 'HamFull', 'HamHalf', 'HamRght', 'HamNone', 'ItalianSausageFull', 'ItalianSausageHalf', 'ItalianSausageRght', 'ItalianSausageNone', 'BananaPeppersFull', 'BananaPeppersHalf', 'BananaPeppersRght', 'BananaPeppersNone', 'BlackOliveFull', 'BlackOliveHalf', 'BlackOliveRght', 'BlackOliveNone', 'JalapenoFull', 'JalapenoHalf', 'JalapenoRght', 'JalapenoNone', 'MushroomFull', 'MushroomHalf', 'MushroomRght', 'MushroomNone', 'PineappleFull', 'PineappleHalf', 'PineappleRght', 'PineappleNone'];
 var toppingBtns = [];
 
 toppingBtnId.forEach(buildButton);
@@ -1191,15 +1191,21 @@ toppingBtnId.forEach(buildButton);
 function buildButton(item, index, arr) {
     buttons[index] = document.createElement('div');
     buttons[index].setAttribute('id', item);
-    if (item.includes('Full')) {
-        buttons[index].setAttribute('class', 'btn full');
-    } else if (item.includes('Half')) {
-        buttons[index].setAttribute('class', 'btn left');
-    } else if (item.includes('Rght')) {
-        buttons[index].setAttribute('class', 'btn right');
+    if (!item.includes('None')) {
+        if (item.includes('Full')) {
+            buttons[index].setAttribute('class', 'btn full');
+        } else if (item.includes('Half')) {
+            buttons[index].setAttribute('class', 'btn left');
+        } else if (item.includes('Rght')) {
+            buttons[index].setAttribute('class', 'btn right');
+        }
+        toppingOptions.appendChild(buttons[index]);
+        buttons[index].addEventListener('click', toppingAdded);
+    } else {
+        buttons[index].setAttribute('class', 'btn none');
+        toppingOptions.appendChild(buttons[index]);
+        buttons[index].addEventListener('click', toppingRemoved);
     }
-    toppingOptions.appendChild(buttons[index]);
-    buttons[index].addEventListener('click', toppingAdded);
 }
 
 var image;
@@ -1233,5 +1239,33 @@ function toppingAdded(evt) {
         area = currentL.slice(currentL.length - 4, currentL.length);
     }
     document.getElementById("list").innerHTML += `${topping} ${area} $1 \<br /\>`;
+    document.getElementById("total").textContent = "Total: $" + cost;
+}
+
+function toppingRemoved(evt) {
+    if (itemCount > 0 && cost > 0) {
+        itemCount -= 1;
+        cost -= 1;
+    }
+    currentT = evt.target.id;
+    var topping = currentT.slice(0, currentT.length - 4);
+    var str = document.getElementById("list").innerHTML;
+    current = pizza.style.background;
+    if (current.includes(`${topping}Full`)) {
+        newCurrent = current.replace(`, url(\"Images/Toppings/${topping}Full.png\")`, "");
+        var n = str.replace(`${topping} Full $1 \<br\>`, "");
+        document.getElementById("list").innerHTML = n;
+    } else if (current.includes(`${topping}Half`)) {
+        newCurrent = current.replace(`, url(\"Images/Toppings/${topping}Half.png\")`, "");
+        var n = str.replace(`${topping} Left $1 \<br\>`, "");
+        document.getElementById("list").innerHTML = n;
+    } else if (current.includes(`${topping}Rght`)) {
+        newCurrent = current.replace(`, url(\"Images/Toppings/${topping}Rght.png\")`, "");
+        var n = str.replace(`${topping} Right $1 \<br\>`, "");
+        document.getElementById("list").innerHTML = n;
+    }
+    pizza.style.background = newCurrent;
+    pizza.style.backgroundRepeat = "no-repeat";
+    pizza.style.backgroundSize = "cover";
     document.getElementById("total").textContent = "Total: $" + cost;
 }
