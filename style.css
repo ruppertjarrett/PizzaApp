@@ -181,5 +181,22 @@ li div:hover {
     }
     #add {
         order: 3;
+        margin-left: 150px;
+    }
+
+    #size {
+        text-align: center;
+    }
+
+    #buttons{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #pizza {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
     }
 }
