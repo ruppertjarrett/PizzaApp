@@ -268,10 +268,21 @@ function thebeast(evt) {
 var toppingOptions = document.getElementById('toppingoptions');
 var toppingBtnId = ['PepperoniFull', 'PepperoniHalf', 'PepperoniRght', 'PepperoniNone', 'BaconFull', 'BaconHalf', 'BaconRght', 'BaconNone', 'ChickenFull', 'ChickenHalf', 'ChickenRght', 'ChickenNone', 'HamFull', 'HamHalf', 'HamRght', 'HamNone', 'ItalianSausageFull', 'ItalianSausageHalf', 'ItalianSausageRght', 'ItalianSausageNone', 'BananaPeppersFull', 'BananaPeppersHalf', 'BananaPeppersRght', 'BananaPeppersNone', 'BlackOliveFull', 'BlackOliveHalf', 'BlackOliveRght', 'BlackOliveNone', 'JalapenoFull', 'JalapenoHalf', 'JalapenoRght', 'JalapenoNone', 'MushroomFull', 'MushroomHalf', 'MushroomRght', 'MushroomNone', 'PineappleFull', 'PineappleHalf', 'PineappleRght', 'PineappleNone'];
 var toppingBtns = [];
+var count = 0;
+var container;
+var namePlate;
 
 toppingBtnId.forEach(buildButton);
 
 function buildButton(item, index, arr) {
+    if (count == 0) {
+        container = document.createElement('div');
+        container.setAttribute('id', item.slice(0, item.length - 4));
+        namePlate = document.createElement('p');
+        namePlate.innerHTML = `${item.slice(0, item.length - 4)} :`;
+        container.appendChild(namePlate);
+        toppingOptions.appendChild(container);
+    }
     buttons[index] = document.createElement('div');
     buttons[index].setAttribute('id', item);
     if (!item.includes('None')) {
@@ -282,12 +293,17 @@ function buildButton(item, index, arr) {
         } else if (item.includes('Rght')) {
             buttons[index].setAttribute('class', 'btn right');
         }
-        toppingOptions.appendChild(buttons[index]);
+        container.appendChild(buttons[index]);
         buttons[index].addEventListener('click', toppingAdded);
     } else {
         buttons[index].setAttribute('class', 'btn none');
-        toppingOptions.appendChild(buttons[index]);
+        container.appendChild(buttons[index]);
         buttons[index].addEventListener('click', toppingRemoved);
+    }
+    count++;
+    if (count == 4) {
+        container.innerHTML += '<br />';
+        count = 0;
     }
 }
 
