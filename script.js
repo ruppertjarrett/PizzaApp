@@ -48,26 +48,84 @@ function add(evt) {
 }
 
 function smallsize(evt) {
+    if(size.innerHTML == "Size: Medium $7"){
+        size.innerHTML = "Size: Small $5";
+        cost -= 7;
+        cost += 5;
+    } else if(size.innerHTML == "Size: Large $10"){
+        size.innerHTML = "Size: Small $5";
+        cost -= 10;
+        cost += 5;
+    } else if(size.innerHTML == "Size: Extra Large $13"){
+        size.innerHTML = "Size: Small $5";
+        cost -= 13;
+        cost += 5;
+    } else{
     size.innerHTML = "Size: Small $5";
     cost += 5;
+    };
     document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function mediumsize(evt) {
-    size.innerHTML = "Size: Medium $7";
-    cost += 7;
+    if(size.innerHTML == "Size: Small $5"){
+        size.innerHTML = "Size: Medium $7";
+        cost -= 5;
+        cost += 7;
+    } else if(size.innerHTML == "Size: Large $10"){
+        size.innerHTML = "Size: Medium $7";
+        cost -= 10;
+        cost += 7;
+    } else if(size.innerHTML == "Size: Extra Large $13"){
+        size.innerHTML = "Size: Medium $7";
+        cost -= 13;
+        cost += 7;
+    } else{
+        size.innerHTML = "Size: Medium $7";
+        cost += 7;
+    };
+    
     document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function largesize(evt) {
-    size.innerHTML = "Size: Large $10";
-    cost += 10;
+    if(size.innerHTML == "Size: Small $5"){
+        size.innerHTML = "Size: Large $10";
+        cost -= 5;
+        cost += 10;
+    } else if(size.innerHTML == "Size: Medium $7"){
+        size.innerHTML = "Size: Large $10";
+        cost -= 7;
+        cost += 10;
+    } else if(size.innerHTML == "Size: Extra Large $13"){
+        size.innerHTML = "Size: Large $10";
+        cost -= 13;
+        cost += 10;
+    } else{
+        size.innerHTML = "Size: Large $10";
+        cost += 10;
+    };
     document.getElementById("total").textContent = "Total: $" + cost;
 }
 
 function xlsize(evt) {
-    size.innerHTML = "Size: Extra Large $13";
-    cost += 13;
+    if(size.innerHTML == "Size: Small $5"){
+        size.innerHTML = "Size: Extra Large $13";
+        cost -= 5;
+        cost += 13;
+    } else if(size.innerHTML == "Size: Medium $7"){
+        size.innerHTML = "Size: Extra Large $13";
+        cost -= 7;
+        cost += 13;
+    } else if(size.innerHTML == "Size: Large $10"){
+        size.innerHTML = "Size: Extra Large $13";
+        cost -= 10;
+        cost += 13;
+    } else{
+        size.innerHTML = "Size: Extra Large $13";
+        cost += 13;
+    };
+    
     document.getElementById("total").textContent = "Total: $" + cost;
 }
 
