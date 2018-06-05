@@ -20,6 +20,11 @@ document.getElementById("marinara").addEventListener("click", marinara);
 document.getElementById("buffalo").addEventListener("click", buffalo);
 document.getElementById("barbecue").addEventListener("click", barbecue);
 document.getElementById("add").addEventListener("click", add);
+document.getElementById("meatlovers").addEventListener('click', meatlovers);
+document.getElementById("pepperonilovers").addEventListener('click', pepperonilovers);
+document.getElementById("hawaiian").addEventListener('click', hawaiian);
+document.getElementById("supreme").addEventListener('click', supreme);
+document.getElementById("thebeast").addEventListener('click', thebeast);
 
 function load(evt) {
     console.log('Loaded');
@@ -162,7 +167,7 @@ function toppings(evt) {
 }
 
 function meatlovers(evt) {
-    size.innerHTML = "Size:"
+    size.innerHTML = "Size: Medium $7"
     document.getElementById('basicoptions').style.display = 'block';
     document.getElementById('toppingoptions').style.display = 'none';
     pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
@@ -170,20 +175,15 @@ function meatlovers(evt) {
     pizza.style.backgroundSize = "cover";
     document.getElementById('list').innerHTML = "";
     document.getElementById('total').innerHTML = "Total: ";
-    cost = 0;
-    itemCount = 0;
+    cost = 3;
+    itemCount = 5;
     pizza.style.background = "url('Images/Empty.png'), url('Images/Toppings/HamFull.png'), url('Images/Toppings/ItalianSausageFull.png'), url('Images/Toppings/BaconFull.png'), url('Images/Toppings/ChickenFull.png'), url('Images/Toppings/PepperoniFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    hamfull(evt);
-    sausagefull(evt);
-    baconfull(evt);
-    chickenfull(evt);
-    pepperonifull(evt);
 }
 
 function pepperonilovers(evt) {
-    size.innerHTML = "Size:"
+    size.innerHTML = "Size: Medium $7"
     document.getElementById('basicoptions').style.display = 'block';
     document.getElementById('toppingoptions').style.display = 'none';
     pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
@@ -191,16 +191,15 @@ function pepperonilovers(evt) {
     pizza.style.backgroundSize = "cover";
     document.getElementById('list').innerHTML = "";
     document.getElementById('total').innerHTML = "Total: ";
-    cost = 0;
-    itemCount = 0;
+    cost = 7;
+    itemCount = 1;
     pizza.style.background = "url('Images/Empty.png'), url('Images/Toppings/PepperoniFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    pepperonifull(evt);
 }
 
 function hawaiian(evt) {
-    size.innerHTML = "Size:"
+    size.innerHTML = "Size: Medium $7"
     document.getElementById('basicoptions').style.display = 'block';
     document.getElementById('toppingoptions').style.display = 'none';
     pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
@@ -208,17 +207,15 @@ function hawaiian(evt) {
     pizza.style.backgroundSize = "cover";
     document.getElementById('list').innerHTML = "";
     document.getElementById('total').innerHTML = "Total: ";
-    cost = 0;
-    itemCount = 0;
+    cost = 8;
+    itemCount = 2;
     pizza.style.background = "url('Images/Empty.png'), url('Images/Toppings/PineappleFull.png'), url('Images/Toppings/HamFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    pineapplefull(evt);
-    hamfull(evt);
 }
 
 function supreme(evt) {
-    size.innerHTML = "Size:"
+    size.innerHTML = "Size: Medium $7"
     document.getElementById('basicoptions').style.display = 'block';
     document.getElementById('toppingoptions').style.display = 'none';
     pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
@@ -226,21 +223,15 @@ function supreme(evt) {
     pizza.style.backgroundSize = "cover";
     document.getElementById('list').innerHTML = "";
     document.getElementById('total').innerHTML = "Total: ";
-    cost = 0;
-    itemCount = 0;
+    cost = 11;
+    itemCount = 6;
     pizza.style.background = "url('Images/Empty.png'), url('Images/Toppings/BaconFull.png'), url('Images/Toppings/JalapenoFull.png'), url('Images/Toppings/BlackOliveFull.png'), url('Images/Toppings/MushroomFull.png'),url('Images/Toppings/BananaPeppersFull.png'), url('Images/Toppings/PepperoniFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    baconfull(evt);
-    jalapenofull(evt);
-    olivesfull(evt);
-    mushroomsfull(evt);
-    bananapeppersfull(evt);
-    pepperonifull(evt);
 }
 
 function thebeast(evt) {
-    size.innerHTML = "Size:"
+    size.innerHTML = "Size: Medium $7"
     document.getElementById('basicoptions').style.display = 'block';
     document.getElementById('toppingoptions').style.display = 'none';
     pizza.style.background = "url('Images/Empty.png'), url('Images/Crust/Crust.png')";
@@ -248,31 +239,22 @@ function thebeast(evt) {
     pizza.style.backgroundSize = "cover";
     document.getElementById('list').innerHTML = "";
     document.getElementById('total').innerHTML = "Total: ";
-    cost = 0;
-    itemCount = 0;
+    cost = 15;
+    itemCount = 10;
     pizza.style.background = "url('Images/Empty.png'), url('Images/Toppings/PineappleFull.png'),url('Images/Toppings/BananaPeppersFull.png'),url('Images/Toppings/BlackOliveFull.png'),url('Images/Toppings/JalapenoFull.png'),url('Images/Toppings/MushroomFull.png'),url('Images/Toppings/PepperoniFull.png'), url('Images/Toppings/ItalianSausageFull.png'), url('Images/Toppings/BaconFull.png'), url('Images/Toppings/ChickenFull.png'), url('Images/Toppings/HamFull.png'), url('Images/Cheese/RegCheese.png'), url('Images/Sauces/Marinara.png'), url('Images/Crust/Crust.png')";
     pizza.style.backgroundRepeat = "no-repeat";
     pizza.style.backgroundSize = "cover";
-    pineapplefull(evt);
-    bananapeppersfull(evt);
-    olivesfull(evt);
-    jalapenofull(evt);
-    mushroomsfull(evt);
-    pepperonifull(evt);
-    sausagefull(evt);
-    baconfull(evt);
-    chickenfull(evt);
-    hamfull(evt);
 }
 
 var toppingOptions = document.getElementById('toppingoptions');
-var toppingBtnId = ['PepperoniFull', 'PepperoniHalf', 'PepperoniRght', 'PepperoniNone', 'BaconFull', 'BaconHalf', 'BaconRght', 'BaconNone', 'ChickenFull', 'ChickenHalf', 'ChickenRght', 'ChickenNone', 'HamFull', 'HamHalf', 'HamRght', 'HamNone', 'ItalianSausageFull', 'ItalianSausageHalf', 'ItalianSausageRght', 'ItalianSausageNone', 'BananaPeppersFull', 'BananaPeppersHalf', 'BananaPeppersRght', 'BananaPeppersNone', 'BlackOliveFull', 'BlackOliveHalf', 'BlackOliveRght', 'BlackOliveNone', 'JalapenoFull', 'JalapenoHalf', 'JalapenoRght', 'JalapenoNone', 'MushroomFull', 'MushroomHalf', 'MushroomRght', 'MushroomNone', 'PineappleFull', 'PineappleHalf', 'PineappleRght', 'PineappleNone'];
+var toppingBtnId = ['PepperoniFull', 'PepperoniHalf', 'PepperoniRght', 'PepperoniNone', 'PepperoniDble', 'BaconFull', 'BaconHalf', 'BaconRght', 'BaconNone', 'BaconDble', 'ChickenFull', 'ChickenHalf', 'ChickenRght', 'ChickenNone', 'ChickenDble', 'HamFull', 'HamHalf', 'HamRght', 'HamNone', 'HamDble', 'ItalianSausageFull', 'ItalianSausageHalf', 'ItalianSausageRght', 'ItalianSausageNone', 'ItalianSausageDble', 'BananaPeppersFull', 'BananaPeppersHalf', 'BananaPeppersRght', 'BananaPeppersNone', 'BananaPeppersDble', 'BlackOliveFull', 'BlackOliveHalf', 'BlackOliveRght', 'BlackOliveNone', 'BlackOliveDble', 'JalapenoFull', 'JalapenoHalf', 'JalapenoRght', 'JalapenoNone', 'JalapenoDble', 'MushroomFull', 'MushroomHalf', 'MushroomRght', 'MushroomNone', 'MushroomDble', 'PineappleFull', 'PineappleHalf', 'PineappleRght', 'PineappleNone', 'PineappleDble'];
 var toppingBtns = [];
 var count = 0;
 var container;
 var namePlate;
 
 toppingBtnId.forEach(buildButton);
+toppingBtnId.forEach(giveEventListener);
 
 function buildButton(item, index, arr) {
     if (count == 0) {
@@ -283,28 +265,32 @@ function buildButton(item, index, arr) {
         container.appendChild(namePlate);
         toppingOptions.appendChild(container);
     }
-    buttons[index] = document.createElement('div');
-    buttons[index].setAttribute('id', item);
+    toppingBtns[index] = document.createElement('div');
+    toppingBtns[index].setAttribute('id', item);
     if (!item.includes('None')) {
         if (item.includes('Full')) {
-            buttons[index].setAttribute('class', 'btn full');
+            toppingBtns[index].setAttribute('class', 'btn full');
         } else if (item.includes('Half')) {
-            buttons[index].setAttribute('class', 'btn left');
+            toppingBtns[index].setAttribute('class', 'btn left');
         } else if (item.includes('Rght')) {
-            buttons[index].setAttribute('class', 'btn right');
+            toppingBtns[index].setAttribute('class', 'btn right');
+        } else if (item.includes('Dble')) {
+            toppingBtns[index].setAttribute('class', 'btn double');
         }
-        container.appendChild(buttons[index]);
-        buttons[index].addEventListener('click', toppingAdded);
+        toppingOptions.appendChild(toppingBtns[index]);
     } else {
-        buttons[index].setAttribute('class', 'btn none');
-        container.appendChild(buttons[index]);
-        buttons[index].addEventListener('click', toppingRemoved);
+        toppingBtns[index].setAttribute('class', 'btn none');
+        toppingOptions.appendChild(toppingBtns[index]);
     }
     count++;
-    if (count == 4) {
-        container.innerHTML += '<br />';
+    if (count == 5) {
+        toppingOptions.innerHTML += '<br />';
         count = 0;
     }
+}
+
+function giveEventListener(item, index, arr) {
+    document.getElementById(item).addEventListener('click', toppingClick);
 }
 
 var image;
@@ -313,58 +299,80 @@ var currentL;
 var topping;
 var area;
 
-function toppingAdded(evt) {
-    if (itemCount == 0) {
-        itemCount += 1;
-    } else if (itemCount >= 1) {
-        itemCount += 1;
-        cost += 1;
-    }
-    if (itemCount == 5) {
-        cost += 1;
-    }
-    currentT = evt.target.id;
-    currentL = evt.target.id;
-    basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
-    pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 102);
-    pizza.style.background += `, url('Images/Toppings/${currentT}.png')`
-    pizza.style.background += basics;
-    pizza.style.backgroundRepeat = "no-repeat";
-    pizza.style.backgroundSize = "cover";
-    topping = currentT.slice(0, currentT.length - 4);
-    if (currentL.includes("Rght")) {
-        area = "Right";
+function toppingClick(evt) {
+    if (!evt.target.id.includes('None')) {
+        console.log("toppingAdded");
+        if (!evt.target.id.includes('Dble')) {
+            if (itemCount == 0) {
+                itemCount += 1;
+            } else if (itemCount >= 1) {
+                itemCount += 1;
+                cost += 1;
+            }
+            if (itemCount == 5) {
+                cost += 1;
+            }
+        } else {
+            if (itemCount == 0) {
+                itemCount += 2;
+            } else if (itemCount >= 1) {
+                itemCount += 2;
+                cost += 2;
+            }
+            if (itemCount == 5) {
+                cost += 2;
+            }
+        }
+        currentT = evt.target.id;
+        currentL = evt.target.id;
+        topping = currentT.slice(0, currentT.length - 4);
+        basics = pizza.style.background.substring(pizza.style.background.length - 102, pizza.style.background.length);
+        pizza.style.background = pizza.style.background.substring(0, pizza.style.background.length - 102);
+        if (evt.target.id.includes('Dble')) {
+            pizza.style.background += `, url('Images/Toppings/${topping}Full.png')`
+        } else {
+            pizza.style.background += `, url('Images/Toppings/${currentT}.png')`
+        }
+        pizza.style.background += basics;
+        pizza.style.backgroundRepeat = "no-repeat";
+        pizza.style.backgroundSize = "cover";
+        if (currentL.includes("Rght")) {
+            area = "Right";
+        } else {
+            area = currentL.slice(currentL.length - 4, currentL.length);
+        }
+        if (evt.target.id.includes('Dble')) {
+            document.getElementById("list").innerHTML += `${topping} Double $2 \<br /\>`;
+        } else {
+            document.getElementById("list").innerHTML += `${topping} ${area} $1 \<br /\>`;
+        }
+        document.getElementById("total").textContent = "Total: $" + cost;
     } else {
-        area = currentL.slice(currentL.length - 4, currentL.length);
+        console.log('toppingRemoved');
+        if (itemCount > 0 && cost > 0) {
+            itemCount -= 1;
+            cost -= 1;
+        }
+        currentT = evt.target.id;
+        var topping = currentT.slice(0, currentT.length - 4);
+        var str = document.getElementById("list").innerHTML;
+        current = pizza.style.background;
+        if (current.includes(`${topping}Full`)) {
+            newCurrent = current.replace(`, url(\"Images/Toppings/${topping}Full.png\")`, "");
+            var n = str.replace(`${topping} Full $1 \<br\>`, "");
+            document.getElementById("list").innerHTML = n;
+        } else if (current.includes(`${topping}Half`)) {
+            newCurrent = current.replace(`, url(\"Images/Toppings/${topping}Half.png\")`, "");
+            var n = str.replace(`${topping} Left $1 \<br\>`, "");
+            document.getElementById("list").innerHTML = n;
+        } else if (current.includes(`${topping}Rght`)) {
+            newCurrent = current.replace(`, url(\"Images/Toppings/${topping}Rght.png\")`, "");
+            var n = str.replace(`${topping} Right $1 \<br\>`, "");
+            document.getElementById("list").innerHTML = n;
+        }
+        pizza.style.background = newCurrent;
+        pizza.style.backgroundRepeat = "no-repeat";
+        pizza.style.backgroundSize = "cover";
+        document.getElementById("total").textContent = "Total: $" + cost;
     }
-    document.getElementById("list").innerHTML += `${topping} ${area} $1 \<br /\>`;
-    document.getElementById("total").textContent = "Total: $" + cost;
-}
-
-function toppingRemoved(evt) {
-    if (itemCount > 0 && cost > 0) {
-        itemCount -= 1;
-        cost -= 1;
-    }
-    currentT = evt.target.id;
-    var topping = currentT.slice(0, currentT.length - 4);
-    var str = document.getElementById("list").innerHTML;
-    current = pizza.style.background;
-    if (current.includes(`${topping}Full`)) {
-        newCurrent = current.replace(`, url(\"Images/Toppings/${topping}Full.png\")`, "");
-        var n = str.replace(`${topping} Full $1 \<br\>`, "");
-        document.getElementById("list").innerHTML = n;
-    } else if (current.includes(`${topping}Half`)) {
-        newCurrent = current.replace(`, url(\"Images/Toppings/${topping}Half.png\")`, "");
-        var n = str.replace(`${topping} Left $1 \<br\>`, "");
-        document.getElementById("list").innerHTML = n;
-    } else if (current.includes(`${topping}Rght`)) {
-        newCurrent = current.replace(`, url(\"Images/Toppings/${topping}Rght.png\")`, "");
-        var n = str.replace(`${topping} Right $1 \<br\>`, "");
-        document.getElementById("list").innerHTML = n;
-    }
-    pizza.style.background = newCurrent;
-    pizza.style.backgroundRepeat = "no-repeat";
-    pizza.style.backgroundSize = "cover";
-    document.getElementById("total").textContent = "Total: $" + cost;
 }

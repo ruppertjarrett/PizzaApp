@@ -154,6 +154,14 @@ li div:hover {
     background-size: cover;
 }
 
+.double {
+    height: 25px;
+    width: 25px;
+    background-image: url('Images/Button/double.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .none {
     height: 25px;
     width: 25px;
